@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./static/styles/index.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <header class="header">
+        <div class="header__logo">
+          <a href="#"><img src="./static/picture/logo.svg" alt="logo" /></a>
+        </div>
+      </header>
+      <main class="content">
+        <div class="content__left">
+          <img src="./static/picture/mainPage.png" alt="coworking" />
+        </div>
+        <div class="content__right">
+          <h1 class="content__heading">01 Заполни форму</h1>
+          <form action="#" class="form content__form">
+            <div class="form__inputs">
+              <div class="form__info">
+                <div class="form__block">
+                  <div class="form__title form__title_theme">Тема урока</div>
+                  <input type="text" id="theme" class="form__first_input form__first input-for-all" placeholder="Напиши что-то конкретное"/>
+
+                  <div class="form__title form__title_class-number">Класс</div>
+                  <div name="" id="class_num" required class="form__first form__first_select input-for-all">
+                      <input class="form__input" type="hidden" name="">
+                      <div class="form__first form__head">4</div>
+                      <ul class="form__list" style="display: none;">
+                          <li class="form__item">Стилизация form CSS</li>
+                          <li class="form__item">Стилизация form JavaScript</li>
+                          <li class="form__item">Стилизация form, используя input</li>
+                      </ul>
+                  </div>
+                </div>
+                <div class="form__chips chips">
+                  <input type="checkbox" id="gen" class="chips__checkbox"/><label for="gen"
+                    >Генетика</label
+                  >
+                  <input type="checkbox" id="human" class="chips__checkbox"/><label for="human"
+                    >Анатомия человека</label
+                  >
+                  <input type="checkbox" id="mount" class="chips__checkbox"/><label for="mount"
+                    >Вулканы</label
+                  >
+                  <input type="checkbox" id="winter" class="chips__checkbox"/><label for="winter"
+                    >Зимние виды спорта</label
+                  >
+                  <input type="checkbox" id="rainbow" class="chips__checkbox"/><label for="rainbow"
+                    >Радуга</label
+                  >
+                  <input type="checkbox" id="indian" class="chips__checkbox"/><label for="indian"
+                    >Индийская культура</label
+                  >
+                  <div class="form__chips hidden">
+                    <input type="checkbox" id="turist" class="chips__checkbox"/><label for="turist"
+                    >Пеший туризм</label
+                  >
+                  <input type="checkbox" id="filosofy" class="chips__checkbox"/><label for="filosofy"
+                    >Философия</label
+                  >
+                  <input type="checkbox" id="Universe" class="chips__checkbox"/><label for="Universe"
+                    >Вселенная</label
+                  >
+                  <input type="checkbox" id="healthy" class="chips__checkbox"/><label for="healthy"
+                    >Здоровые привычки</label
+                  >
+                  <input type="checkbox" id="butterfly" class="chips__checkbox"/><label for="butterfly"
+                    >Бабочки</label
+                  >
+                  <input type="checkbox" id="bear" class="chips__checkbox"/><label for="bear"
+                    >Белые медведи</label
+                  >
+                  <input type="checkbox" id="economy" class="chips__checkbox"/><label for="economy"
+                    >Экономика</label
+                  >
+                  <input type="checkbox" id="finance" class="chips__checkbox"/><label for="finance"
+                    >Финансовая грамотность</label
+                  >
+                  <input type="checkbox" id="photosynthesis" class="chips__checkbox"/><label for="fonosintez"
+                    >Фотосинтез</label
+                  >
+                  </div>
+                </div>
+                <div class="form__show">
+                  <button class="form__show_more">+ Показать больше вариантов</button>
+                </div>
+              </div>
+              <div class="form__purpose">
+                <div class="form__purpose_info">
+                  <div class="form__title form__title_lesson">Цель урока</div>
+                  <textarea class="form__purpose_input input-for-all" value="" placeholder="Напиши свою учебную цель" name="" id="" cols="30" rows="10" ></textarea>
+                </div>
+                <div class="form__counter">
+                  <div class="form__counter_count">0/200</div>
+                </div>
+              </div>
+            </div>
+            <div class="form__buttons">
+              <button class="form__button form__button_prev ">Назад</button>
+              <button class="form__button form__button_next form__button_no-active" disabled>Следующий шаг</button>
+            </div>
+          </form>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
