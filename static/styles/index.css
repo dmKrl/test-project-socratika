@@ -26,6 +26,30 @@ button {
 
 input:focus {
   outline: var(--Blue);
+  transition: all 0.3s ease;
+  border: 1.25px solid var(--Blue);
+}
+
+input:focus ~ .form__first_select,
+.form__first_select:focus {
+  outline: var(--Blue);
+  transition: all 0.3s ease;
+  border: 1.25px solid var(--Blue);
+}
+
+input:focus ~ .form__title,
+.form__title:focus {
+  color: #3ca9f0;
+}
+
+textarea:focus ~ .form__title,
+.form__title:focus {
+  color: #3ca9f0;
+}
+
+textarea:focus {
+  transition: all 0.3s ease;
+  outline: var(--Blue);
   border: 1.25px solid var(--Blue);
 }
 
@@ -114,9 +138,6 @@ input:focus {
   gap: 16px;
   max-width: 800px;
 }
-.form__head {
-  cursor: pointer;
-}
 .form__first {
   height: 56px;
 }
@@ -132,37 +153,50 @@ input:focus {
   display: block;
   transition: 0.2s ease-in;
 }
-.form__first.open::after {
-  transform: translateY(50%) rotate(180deg);
-}
 .form__first_input {
   width: 664px;
 }
 .form__first_select {
   margin-left: 12px;
   width: 120px;
+  cursor: pointer;
 }
 .form__list {
-  display: none;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  transition: all 0.3s ease;
   position: absolute;
-  top: 100%;
-  left: 0;
+  padding-top: 10px;
+  top: 50%;
   right: 0;
   background: #fff;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   margin-top: 5px;
-  max-height: 205px;
+  width: 120px;
+  height: 200px;
   overflow-x: hidden;
   overflow-y: auto;
   z-index: 100;
-  margin: 0;
-  padding: 0;
   font-size: 14px;
   color: #424348;
   scrollbar-color: dark;
   scrollbar-width: thin;
   overscroll-behavior: contain;
+}
+.form__item {
+  padding: 0px 16px;
+  color: var(--Black---text-primary);
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  transition: all 0.1s ease;
+  line-height: normal;
+}
+.form__item:hover {
+  background-color: var(--light-gray-background);
 }
 .form__option {
   display: flex;
@@ -181,6 +215,9 @@ input:focus {
   align-content: flex-start;
   gap: 8px;
   flex-wrap: wrap;
+}
+.form__chips_more {
+  transition: all 0.3s ease-in;
 }
 .form__show_more {
   background: none;
@@ -204,9 +241,17 @@ input:focus {
   overflow: hidden;
 }
 .form__counter {
+  display: flex;
+  justify-content: space-between;
   text-align: end;
   margin-top: 2px;
   margin-right: 17px;
+}
+.form__counter_message {
+  opacity: 0;
+}
+.form__text_size {
+  font-size: 16px;
 }
 .form__buttons {
   display: flex;
@@ -232,12 +277,16 @@ input:focus {
   background: var(--light-gray-bg);
   border: none;
   color: var(--Gray---text-tertiary);
+  transition: all 0.1s ease-in;
 }
 
 .form__button_active {
+  color: #fff;
+  text-align: center;
   border-radius: 12px;
   background: var(--Dark-blue);
   box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.12);
+  transition: all 0.1s ease-in;
 }
 
 .chips label {
@@ -262,6 +311,7 @@ input:focus {
 }
 
 .chips label:hover {
+  transition: all 0.3s ease;
   background: var(--light-gray-background);
 }
 
@@ -271,6 +321,23 @@ input:focus {
 
 .hidden {
   display: none;
+}
+
+.error-border {
+  border-color: red;
+}
+
+.error-text {
+  color: red;
+}
+
+.error-text:focus ~ .form__title,
+.form__title:focus {
+  color: red;
+}
+
+.open::after {
+  transform: translateY(50%) rotate(180deg);
 }
 
 @media (max-width: 1535px) {
@@ -320,7 +387,7 @@ input:focus {
   .form__title_class-number {
     width: 50px;
     top: -10px;
-    right: 26px;
+    right: 16px;
   }
   .form__inputs {
     transition: 0.3s ease-in;
@@ -346,7 +413,7 @@ input:focus {
     font-size: 14px;
     padding: 12px 36px;
   }
-  .form__counter_count {
+  .form__text_size {
     font-size: 14px;
   }
 }
@@ -384,7 +451,7 @@ input:focus {
   .form__title_class-number {
     width: 40px;
     top: -7px;
-    right: 12px;
+    right: 8px;
   }
   .form__title_lesson {
     width: 70px;
@@ -414,7 +481,7 @@ input:focus {
     font-size: 12px;
     padding: 10px 32px;
   }
-  .form__counter_count {
+  .form__text_size {
     font-size: 10px;
   }
   .form__first {
@@ -462,7 +529,7 @@ input:focus {
   .form__title_class-number {
     width: 30px;
     top: -6px;
-    right: 12px;
+    right: 8px;
   }
   .form__title_lesson {
     width: 60px;
@@ -491,7 +558,7 @@ input:focus {
     font-size: 12px;
     padding: 8px 24px;
   }
-  .form__counter_count {
+  .form__text_size {
     font-size: 10px;
   }
   .form__first {
