@@ -144,6 +144,7 @@ textarea:focus {
     }
   }
   &__head {
+    font-size: 1;
     &::after {
       width: 12px;
       height: 12px;
@@ -344,7 +345,7 @@ textarea:focus {
 }
 
 .checked::after {
-  background: #fff url(/static/picture/tick-circle.svg) no-repeat center / cover;
+  background-image: url(/static/picture/tick-circle.svg);
   background-color: opacify($color: #ffffff00, $amount: 0);
   width: 18px;
   height: 18px;
