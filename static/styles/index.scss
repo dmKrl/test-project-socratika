@@ -144,12 +144,11 @@ textarea:focus {
     }
   }
   &__head {
-    font-size: 1;
+    font-size: 18px;
     &::after {
       width: 12px;
       height: 12px;
-      background: #fff url(/static/picture/arrow-up.svg) no-repeat center /
-        cover;
+      background: #fff url('../picture/arrow-up.svg') no-repeat center / cover;
       position: absolute;
       right: 20px;
       bottom: 50%;
@@ -345,7 +344,7 @@ textarea:focus {
 }
 
 .checked::after {
-  background-image: url(/static/picture/tick-circle.svg);
+  background: #fff url('../picture/tick-circle.svg') no-repeat center / cover;
   background-color: opacify($color: #ffffff00, $amount: 0);
   width: 18px;
   height: 18px;
