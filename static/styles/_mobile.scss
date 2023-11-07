@@ -2,6 +2,9 @@
   body {
     transition: 0.3s ease-in;
   }
+  #app {
+    margin: 30px auto;
+  }
   .header {
     margin-left: 0;
     justify-content: center;
@@ -57,6 +60,12 @@
       max-width: 300px;
       &_input {
         max-width: 300px;
+        font-size: 14px;
+      }
+    }
+    &__first {
+      &_input {
+        font-size: 12px;
       }
     }
     &__button {
@@ -101,8 +110,8 @@
   }
 }
 @media (max-width: 479px) {
-  input {
-    font-size: 12px;
+  #app {
+    margin: 30px auto;
   }
   .header {
     margin-left: 0;
@@ -156,6 +165,12 @@
       max-width: 250px;
       &_input {
         max-width: 250px;
+        font-size: 14px;
+      }
+    }
+    &__first {
+      &_input {
+        font-size: 12px;
       }
     }
     &__button {

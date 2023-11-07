@@ -137,6 +137,15 @@ textarea:focus {
 }
 .form__first_input {
   width: 664px;
+  overflow: hidden;
+  color: var(--Black---text-primary);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 .form__first_select {
   margin-left: 12px;
@@ -380,6 +389,9 @@ textarea:focus {
   }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
+  #app {
+    margin: 30px auto;
+  }
   .header {
     margin-left: 0;
     justify-content: center;
@@ -433,6 +445,10 @@ textarea:focus {
   }
   .form__purpose_input {
     max-width: 450px;
+    font-size: 14px;
+  }
+  .form__first_input {
+    font-size: 14px;
   }
   .form__button {
     font-size: 14px;
@@ -456,6 +472,9 @@ textarea:focus {
 @media (max-width: 767px) and (min-width: 480px) {
   body {
     transition: 0.3s ease-in;
+  }
+  #app {
+    margin: 30px auto;
   }
   .header {
     margin-left: 0;
@@ -512,6 +531,10 @@ textarea:focus {
   }
   .form__purpose_input {
     max-width: 300px;
+    font-size: 14px;
+  }
+  .form__first_input {
+    font-size: 12px;
   }
   .form__button {
     font-size: 12px;
@@ -552,8 +575,8 @@ textarea:focus {
   }
 }
 @media (max-width: 479px) {
-  input {
-    font-size: 12px;
+  #app {
+    margin: 30px auto;
   }
   .header {
     margin-left: 0;
@@ -605,6 +628,10 @@ textarea:focus {
   }
   .form__purpose_input {
     max-width: 250px;
+    font-size: 14px;
+  }
+  .form__first_input {
+    font-size: 12px;
   }
   .form__button {
     font-size: 12px;

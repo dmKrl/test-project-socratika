@@ -127,6 +127,15 @@ textarea:focus {
     height: 56px;
     &_input {
       width: 664px;
+      overflow: hidden;
+      color: var(--Black---text-primary);
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-family: Inter;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
     }
     &_select {
       margin-left: 12px;
