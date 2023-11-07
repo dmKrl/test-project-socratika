@@ -30,15 +30,8 @@ input:focus {
   border: 1.25px solid var(--Blue);
 }
 
-input:focus ~ .form__first_select,
-.form__first_select:focus {
-  outline: var(--Blue);
-  transition: all 0.3s ease;
-  border: 1.25px solid var(--Blue);
-}
-
-input:focus ~ .form__title,
-.form__title:focus {
+input:focus ~ .form__title_theme,
+.form__title_theme:focus {
   color: #3ca9f0;
 }
 
@@ -93,6 +86,7 @@ textarea:focus {
   align-items: flex-start;
   max-width: 800px;
   gap: 32px;
+  position: relative;
 }
 .form__inputs {
   display: flex;
@@ -141,18 +135,6 @@ textarea:focus {
 .form__first {
   height: 56px;
 }
-.form__first::after {
-  width: 10px;
-  height: 6px;
-  background: #fff url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M4.50495 5.78413L0.205241 1.25827C-0.0684138 0.970375 -0.0684138 0.503596 0.205241 0.215836C0.478652 -0.0719461 0.922098 -0.071946 1.19549 0.215837L5.00007 4.22052L8.80452 0.215953C9.07805 -0.0718292 9.52145 -0.0718292 9.79486 0.215953C10.0684 0.503736 10.0684 0.970492 9.79486 1.25839L5.49508 5.78425C5.35831 5.92814 5.17925 6 5.00009 6C4.82085 6 4.64165 5.928 4.50495 5.78413Z' fill='%23ED266A'/%3E%3C/svg%3E%0A") no-repeat center/cover;
-  position: absolute;
-  right: 20px;
-  bottom: 50%;
-  transform: translateY(50%);
-  content: "";
-  display: block;
-  transition: 0.2s ease-in;
-}
 .form__first_input {
   width: 664px;
 }
@@ -161,11 +143,29 @@ textarea:focus {
   width: 120px;
   cursor: pointer;
 }
+.form__head::after {
+  width: 12px;
+  height: 12px;
+  background: #fff url(/static/picture/arrow-up.svg) no-repeat center/cover;
+  position: absolute;
+  right: 20px;
+  bottom: 50%;
+  transform: translateY(50%) rotate(180deg);
+  content: "";
+  display: block;
+  transition: 0.2s ease-in;
+}
+.form__input {
+  position: absolute;
+  width: 120px;
+  cursor: pointer;
+  opacity: 0;
+  right: 0;
+}
 .form__list {
   display: flex;
   flex-direction: column;
   gap: 18px;
-  transition: all 0.3s ease;
   position: absolute;
   padding-top: 10px;
   top: 50%;
@@ -184,6 +184,7 @@ textarea:focus {
   scrollbar-color: dark;
   scrollbar-width: thin;
   overscroll-behavior: contain;
+  transition: all 1s ease;
 }
 .form__item {
   padding: 0px 16px;
@@ -336,8 +337,30 @@ textarea:focus {
   color: red;
 }
 
+.focus-border {
+  outline: var(--Blue);
+  transition: all 0.3s ease;
+  border: 1.25px solid var(--Blue);
+}
+
+.focus-text {
+  color: #3ca9f0;
+}
+
+.checked::after {
+  background: #fff url(/static/picture/tick-circle.svg) no-repeat center/cover;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  right: 20px;
+  bottom: 50%;
+  content: "";
+  display: block;
+  transition: 0.2s ease-in;
+}
+
 .open::after {
-  transform: translateY(50%) rotate(180deg);
+  transform: translateY(50%);
 }
 
 @media (max-width: 1535px) {
