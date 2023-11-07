@@ -66,6 +66,19 @@
     &__text_size {
       font-size: 10px;
     }
+    &__list {
+      width: 54px;
+      height: 170px;
+    }
+    &__item {
+      padding: 0px 12px;
+      font-size: 14px;
+    }
+    &__head {
+      &::after {
+        right: 10px;
+      }
+    }
     &__first {
       height: 56px;
       &::after {
@@ -80,6 +93,11 @@
   .chips label {
     padding: 4px 10px;
     font-size: 12px;
+  }
+  .checked::after {
+    right: 5px;
+    width: 14px;
+    height: 14px;
   }
 }
 @media (max-width: 479px) {
@@ -147,6 +165,19 @@
     &__text_size {
       font-size: 10px;
     }
+    &__list {
+      width: 46px;
+      height: 170px;
+    }
+    &__item {
+      font-size: 14px;
+      padding: 0px 12px;
+    }
+    &__head {
+      &::after {
+        right: 10px;
+      }
+    }
     &__first {
       height: 56px;
       &::after {
@@ -161,5 +192,10 @@
   .chips label {
     padding: 2px 6px;
     font-size: 12px;
+  }
+  .checked::after {
+    right: 5px;
+    width: 14px;
+    height: 14px;
   }
 }

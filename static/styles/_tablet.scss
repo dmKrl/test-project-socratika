@@ -74,5 +74,18 @@
     &__text_size {
       font-size: 14px;
     }
+    &__list {
+      width: 72px;
+    }
+    &__head {
+      &::after {
+        right: 10px;
+      }
+    }
+  }
+  .checked::after {
+    right: 10px;
+    width: 14px;
+    height: 14px;
   }
 }

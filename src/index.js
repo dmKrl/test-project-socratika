@@ -55,7 +55,7 @@ formElement.addEventListener('click', (event) => {
 
   if (target.closest('.form__item')) {
     selectListElement.textContent = target.closest('.form__item').textContent;
-    arrayListItemElements.map((listItem) => console.log(listItem));
+    arrayListItemElements.map((listItem) => listItem.classList.remove('checked'));
     target.classList.toggle('checked');
   }
 });
