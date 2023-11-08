@@ -63,11 +63,6 @@
         font-size: 14px;
       }
     }
-    &__first {
-      &_input {
-        font-size: 12px;
-      }
-    }
     &__button {
       font-size: 12px;
       padding: 10px 32px;
@@ -90,12 +85,19 @@
     }
     &__first {
       height: 56px;
+      &_input {
+        font-size: 12px;
+      }
       &::after {
         width: 8px;
         height: 4px;
         right: 15px;
         transform: translateY(50%);
         transition: 0.2s ease-in;
+      }
+      &_clear {
+        bottom: 30%;
+        left: 60%;
       }
     }
   }
@@ -168,11 +170,6 @@
         font-size: 14px;
       }
     }
-    &__first {
-      &_input {
-        font-size: 12px;
-      }
-    }
     &__button {
       font-size: 12px;
       padding: 8px 24px;
@@ -195,6 +192,13 @@
     }
     &__first {
       height: 56px;
+      &_input {
+        font-size: 12px;
+      }
+      &_clear {
+        bottom: 30%;
+        left: 56%;
+      }
       &::after {
         width: 6px;
         height: 3px;

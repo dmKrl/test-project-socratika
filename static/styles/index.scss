@@ -18,7 +18,7 @@ button {
 .input-for-all {
   border: 1.25px solid var(--light-gray-lines);
   border-radius: 10px;
-  padding: 17.5px 10px;
+  padding: 17.5px 44px 17.5px 18px;
 }
 input:focus {
   outline: var(--Blue);
@@ -136,6 +136,17 @@ textarea:focus {
       font-style: normal;
       font-weight: 400;
       line-height: normal;
+    }
+    &_clear {
+      position: absolute;
+      background-color: white;
+      border-radius: 10px;
+      background-image: url('/static/picture/clearInput.svg');
+      border: none;
+      bottom: 35%;
+      left: 77%;
+      width: 18px;
+      height: 18px;
     }
     &_select {
       margin-left: 12px;

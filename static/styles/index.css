@@ -21,7 +21,7 @@ button {
 .input-for-all {
   border: 1.25px solid var(--light-gray-lines);
   border-radius: 10px;
-  padding: 17.5px 10px;
+  padding: 17.5px 44px 17.5px 18px;
 }
 
 input:focus {
@@ -146,6 +146,17 @@ textarea:focus {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+.form__first_clear {
+  position: absolute;
+  background-color: white;
+  border-radius: 10px;
+  background-image: url("/static/picture/clearInput.svg");
+  border: none;
+  bottom: 35%;
+  left: 77%;
+  width: 18px;
+  height: 18px;
 }
 .form__first_select {
   margin-left: 12px;
@@ -452,6 +463,11 @@ textarea:focus {
   }
   .form__first_input {
     font-size: 14px;
+    padding-right: 10px;
+  }
+  .form__first_clear {
+    bottom: 30%;
+    left: 70%;
   }
   .form__button {
     font-size: 14px;
@@ -536,9 +552,6 @@ textarea:focus {
     max-width: 300px;
     font-size: 14px;
   }
-  .form__first_input {
-    font-size: 12px;
-  }
   .form__button {
     font-size: 12px;
     padding: 10px 32px;
@@ -560,12 +573,19 @@ textarea:focus {
   .form__first {
     height: 56px;
   }
+  .form__first_input {
+    font-size: 12px;
+  }
   .form__first::after {
     width: 8px;
     height: 4px;
     right: 15px;
     transform: translateY(50%);
     transition: 0.2s ease-in;
+  }
+  .form__first_clear {
+    bottom: 30%;
+    left: 60%;
   }
   .chips label {
     padding: 4px 10px;
@@ -633,9 +653,6 @@ textarea:focus {
     max-width: 250px;
     font-size: 14px;
   }
-  .form__first_input {
-    font-size: 12px;
-  }
   .form__button {
     font-size: 12px;
     padding: 8px 24px;
@@ -656,6 +673,13 @@ textarea:focus {
   }
   .form__first {
     height: 56px;
+  }
+  .form__first_input {
+    font-size: 12px;
+  }
+  .form__first_clear {
+    bottom: 30%;
+    left: 56%;
   }
   .form__first::after {
     width: 6px;

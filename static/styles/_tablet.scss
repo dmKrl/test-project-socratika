@@ -74,6 +74,12 @@
     &__first {
       &_input {
         font-size: 14px;
+      padding-right: 10px;
+
+      }
+      &_clear {
+        bottom: 30%;
+        left: 70%;
       }
     }
     &__button {
