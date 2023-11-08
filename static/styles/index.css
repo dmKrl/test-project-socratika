@@ -151,7 +151,7 @@ textarea:focus {
   position: absolute;
   background-color: white;
   border-radius: 10px;
-  background-image: url("/static/picture/clearInput.svg");
+  background-image: url("../picture/clearInput.svg");
   border: none;
   bottom: 35%;
   left: 77%;
