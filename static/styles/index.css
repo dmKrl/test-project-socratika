@@ -467,7 +467,7 @@ textarea:focus {
   }
   .form__first_clear {
     bottom: 30%;
-    left: 70%;
+    left: 66%;
   }
   .form__button {
     font-size: 14px;
@@ -585,7 +585,7 @@ textarea:focus {
   }
   .form__first_clear {
     bottom: 30%;
-    left: 60%;
+    left: 54%;
   }
   .chips label {
     padding: 4px 10px;
@@ -679,7 +679,7 @@ textarea:focus {
   }
   .form__first_clear {
     bottom: 30%;
-    left: 56%;
+    left: 48%;
   }
   .form__first::after {
     width: 6px;
